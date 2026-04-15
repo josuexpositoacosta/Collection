@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Inter", "Helvetica Neue", Arial, sans-serif;
+  
+  --color-surface: #F0F2F5;
+  --color-on-surface: #1E293B;
+  --color-secondary: #94A3B8;
+  --color-outline: #E2E8F0;
+  --color-primary: #6366F1;
+  --color-on-primary: #ffffff;
+  
+  --color-vibrant-pink: #EC4899;
+  --color-vibrant-amber: #F59E0B;
+  --color-vibrant-emerald: #10B981;
+  --color-vibrant-dark: #1E293B;
+
+  --radius-card: 32px;
+  --radius-button: 16px;
+  
+  --shadow-vibrant: 0 10px 25px rgba(0,0,0,0.03);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-extrabold tracking-tight;
+  }
+}
+
+.card-vibrant {
+  @apply bg-white rounded-[32px] shadow-vibrant border-l-[8px];
+}
+
+.card-vibrant-1 { @apply border-l-primary; }
+.card-vibrant-2 { @apply border-l-vibrant-pink; }
+.card-vibrant-3 { @apply border-l-vibrant-emerald; }
+.card-vibrant-4 { @apply border-l-vibrant-amber; }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.glass-header {
+  @apply bg-white/90 backdrop-blur-xl;
+}
+
+.progress-bar {
+  @apply h-3 bg-[#F1F5F9] rounded-full overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full rounded-full;
+}
